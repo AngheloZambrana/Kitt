@@ -1,0 +1,36 @@
+1. How does it benefit us to have the pre-processing part in the string maching algorithms?
+
+El pre-procesamiento en algoritmos de coincidencia de cadenas nos ayuda al mejorar la eficiencia de la búsqueda.
+En lugar de comparar repetidamente el patrón con el texto durante la búsqueda, realizamos operaciones anticipadas
+en el patrón o en el texto para optimizar el proceso de búsqueda. Esto nos permite encontrar coincidencias de manera
+más rápida y eficiente.
+
+2. Why is the KMP"s time complexity better tha the string-matching with finite automata?
+
+El tiempo de complejidad de KMP es mejor que la coincidencia de cadenas con autómatas finitos porque en KMP,
+el pre-procesamiento se hace en tiempo lineal respecto a la longitud del patrón, lo que permite una bPsqueda
+más rápida. En cambio, la construcción del autmata finito determinista en la coincidencia de cadenas
+con autOmtas finitos puede ser más costosa en tiempo, especialmente para patrones largos o complejos.
+
+3. Given a P and x. What is the highest value we can get in the suffix function, and why?
+
+El valor más alto que podemos obtener en la función de sufijo es la longitud del patrón P. Esto sucede cuando
+el sufijo completo de P coincide con un prefijo del texto x. Por ejemplo, si P = "ABC" y x = "ABCDABC", el sufijo
+"ABC" de P coincide con el prefijo "ABC" de x, lo que nos da una coincidencia de longitud 3, que es la longitud de P.
+Esto ocurre porque el sufijo "ABC" se encuentra al final de P y coincide con un prefijo de longitud 3 en x.
+Por lo tanto, la coincidencia alcanza su longitud máxima, que es la longitud del patrón P.
+
+4a.  Identify the greedy choice
+En este código, la elección greedy ocurre en el bucle for dentro del método minSouvenirs.
+Se asignan souvenirs a cada invitado si su nivel de felicidad es menor o igual al del invitado anterior.
+La elección greedy aquí es asignar souvenirs suficientes para aumentar la felicidad del invitado al nivel
+del invitado anterior más 1.
+
+4b. Identify the optimal substructure
+La subestructura óptima se presenta en la naturaleza acumulativa de la solución.
+Al asignar souvenirs a cada invitado, nos aseguramos de que cada invitado tenga un nivel de felicidad igual o
+mayor que sus vecinos más felices. Esto asegura que la solución global sea óptima.
+
+4d. What is the time complexity of your solution
+El tiempo de complejidad de la solución es lineal, O(n), donde n es el número de invitados. Esto se debe a que
+recorremos la lista de invitados una vez para asignar souvenirs, lo que lleva a una complejidad temporal lineal.
