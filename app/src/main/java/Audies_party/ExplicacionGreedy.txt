@@ -1,0 +1,36 @@
+Explanation of the choice of greedy algorithm
+
+El algoritmo greedy fue elegido para resolver el problema de generar la lista de invitados
+debido a su simplicidad y eficiencia. La estrategia greedy implica tomar decisiones locales
+óptimas en cada paso para intentar encontrar una solución global óptima.
+
+En este caso, el objetivo es seleccionar un conjunto de invitados que maximicen el número de
+relaciones amistosas (con un valor mayor o igual a x) y, al mismo tiempo, maximicen la suma total
+de estas relaciones entre los invitados seleccionados.
+
+La estrategia greedy es adecuada para este problema porque podemos tomar la decisión óptima
+en cada paso simplemente seleccionando al siguiente invitado que tenga la relación más alta con
+los invitados actuales, siempre y cuando cumpla con el requisito de la relación mínima x. Esto nos
+permite maximizar tanto el número de invitados como la suma total de sus relaciones de manera eficiente.
+
+Correctness of the algorithm
+
+The greedy algorithm used in the generateGuestList function selects each guest individually based
+on their relationships with the current guests. Since we select guests with the highest relationships
+first, we guarantee that each guest added to the list will have at least one friendship relationship of
+value x with some other previously selected guest.
+
+Additionally, as we select guests individually based on their relationships with the current guests,
+we also maximize the total sum of relationships among the selected guests. This is because, at each step,
+we select the guest that contributes the highest sum of additional relationships among the current guests.
+
+Time complexity of the algorithm
+
+The time complexity of the greedy algorithm used to generate the guest list is O(n^2), where n is
+the number of villagers. This is because, in the worst case, we must consider all relationships between
+all villagers to select the optimal guest list.
+
+The divideIntoGroups function has a time complexity of O(n * k), where n is the number of guests and k
+is the number of groups they are divided into. This is because we need to iterate over all guests and
+assign them to the corresponding groups, resulting in linear complexity based on the number of guests
+and the number of groups.
