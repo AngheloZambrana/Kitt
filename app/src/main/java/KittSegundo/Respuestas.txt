@@ -1,0 +1,21 @@
+1. Write a brief explanation of why you have chosen the DP algorithm to solve the problem.
+
+He elegido el algoritmo de programación dinámica (DP) para resolver el problema porque es especialmente
+efectivo para optimizar problemas de optimización, como el cálculo de la similitud entre dos textos.
+El enfoque DP nos permite descomponer el problema en subproblemas más pequeños y resolverlos de manera
+óptima, evitando así la repetición de cálculos innecesarios y mejorando la eficiencia del algoritmo.
+
+2. Identify the time complexity of your solution.
+
+La complejidad temporal de nuestra solución es O(n * m), donde "n" es la longitud del texto más largo
+y "m" es la longitud del texto más corto. Esto se debe a que necesitamos recorrer ambos textos para calcular
+la similitud entre ellos y encontrar las palabras mal escritas.
+
+3.Is there a non-dynamic programming solution? if so, please explain the idea and compare it with your solution.
+
+Sí, existe una solución que no utiliza programación dinámica. Una posible alternativa sería comparar cada
+palabra de un texto con todas las palabras del otro texto, lo que resultaría en una complejidad temporal
+de O(n * m * p), donde "n" y "m" son las longitudes de los textos y "p" es el número promedio de palabras
+en cada texto. Sin embargo, esta solución sería mucho menos eficiente en comparación con el enfoque de programación
+dinámica, ya que requeriría realizar una gran cantidad de comparaciones redundantes y no aprovecharía la naturaleza
+repetitiva del problema.
