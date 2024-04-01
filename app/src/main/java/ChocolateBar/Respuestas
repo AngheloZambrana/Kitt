@@ -1,0 +1,17 @@
+Inge hubo un problema al subir, recien me di cuenta por esos estoy subiendo en un commit aparte
+
+i. Identify the greedy choice:
+In this greedy approach, the greedy choice is to break the chocolate bar into pieces of increasing sizes as
+much as possible. So, we'll start by breaking off a piece of size 1, then a piece of size 2, then a piece of
+size 3, and so on until the remaining chocolate bar length is less than or equal to 0.
+
+ii. Explain the optimal substructure:
+The optimal substructure of this problem lies in the fact that breaking the chocolate bar into smaller pieces
+maximizes the total number of pieces. By continuously breaking off pieces of increasing sizes, we ensure that
+we maximize the number of pieces obtained from the chocolate bar.
+
+
+iv. Time complexity of the solution:
+The time complexity of this greedy algorithm is O(sqrt(N)), where N is the length of the chocolate bar.
+This is because in the worst case, the while loop iterates up to sqrt(N) times, as we're reducing N by i
+at each iteration, where i starts from 2 and increments by 1 in each iteration.
