@@ -1,0 +1,49 @@
+1. Give an example where we prefer fuzzy matching over string machining
+R. Imaginemos que tenemos una base de datos de nombres de productos y un usuario está realizando una búsqueda
+utilizando un formulario de búsqueda en un sitio web de comercio electrónico. El usuario quiere encontrar un producto
+llamado "iPhone X", pero comete un pequeño error tipográfico al escribirlo como "iPhon X". Aquí es donde preferiríamos
+el fuzzy matching sobre el string matching
+Si aplicamos un emparejamiento de string machine, el algoritmo buscará exactamente el término "iPhon X" en la base de
+datos y no encontrará coincidencias, ya que el nombre del producto en la base de datos es "iPhone X". Como resultado,
+el usuario recibirá un mensaje de "producto no encontrado" o una lista vacía de resultados.
+Sin embargo, si aplicamos un fuzzy matching, el algoritmo puede utilizar métricas de similitud como la distancia de
+edición o la similitud coseno para encontrar coincidencias similares al término de búsqueda del usuario. Incluso con
+2. Given T =  aabcababcxab and P = ababc. Define the alphabet, finite set, start
+state, and accepting state.
+R.  Alphabet: {a, b, c, x}
+Finite set of states: {0, 1, 2, 3, 4}
+Start state: 0
+Accepting state: 4
+3. Given T = aabcababcxab and P = ababc. What is the value of the transition
+function  L(2,a)
+el valor es 3 o sea a
+
+a.1) If you say that can be solved with dynamic programming
+Si se puede con Programacion Dinamica
+
+i) Analyse the problem based pn subproblems
+El subproblema implica determinar el máximo número de comidas que Cube puede comer dentro de un
+límite de tiempo dado, utilizando solo las primeras i comidas y j minutos disponibles.
+
+ii) Identify where the overlap occurs
+El overlap ocurre cuando necesitamos calcular el resultado óptimo para una combinación de comidas
+y minutos dados, utilizando resultados previamente calculados para subproblemas
+más pequeños, reflejados en la matriz de la tabla de programación dinámica.
+
+a.2) If you say that can be solved with greedy
+Si se puede con Greedy
+
+i) Identify the greedy choice
+La greedy choice que use es seleccionar siempre la comida que tarde menos tiempo en terminarse.
+De este modo, Cube maximiza el tiempo restante disponible para comer más.
+ii) Explain the optimal structure
+La estructura óptima consiste en elegir la siguiente comida que minimice el tiempo
+necesario para terminar de comer, garantizando que Cube pueda consumir tantas comidas
+como sea posible dentro del límite de tiempo dado. Al seleccionar sistemáticamente la
+comida con el tiempo de ingesta más corto, Cube maximiza el número de comidas consumidas
+a la vez que utiliza el tiempo disponible de forma eficiente.
+
+c. If you say the problem can  be solved with a greedy algorithm, implement your solution
+using a greedy algorithm; otherwise, implement your solution with dynamic programming.
+d. What is the time complexity of your solution?
+La complejidad temporal del codigo es O(N log N), donde N es el número de comidas.
